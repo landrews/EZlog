@@ -1,16 +1,21 @@
 {
-  "name": "ezlog-app",
-  "version": "0.1.0",
-  "private": true,
+  "name": "ezlog",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "neutrino build",
+    "start": "neutrino start"
+  },
   "dependencies": {
+    "prop-types": "^15.6.1",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
-    "react-scripts": "1.1.4"
+    "react-hot-loader": "^4.1.1"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+  "devDependencies": {
+    "@neutrinojs/react": "^8.2.2",
+    "@neutrinojs/web": "^8.2.2",
+    "neutrino": "^8.2.2"
   }
 }
