@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import Header from '../components/header/Header';
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import * as userActions from 'store/actions/user'
+import * as userActions from '../store/actions/user'
 import { Link } from 'react-router-dom'
 
 class EzlogNy extends Component {
