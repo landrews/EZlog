@@ -1,18 +1,24 @@
 import React, { Component } from 'react';
 import { HashRouter, Route, Switch } from 'react-router-dom';
-import { EzlogNy } from './views';
-import { EzlogNas } from './views';
+import EzlogNy from './pages/EzlogNy';
+import EzlogNas from './pages/EzlogNas';
+import Header from './components/header/Header';
+import _404 from './pages/_404'
 import './App.css';
 
 class App extends Component {
   render() {
     return (
-      <HashRouter>
-        <Switch>
-          <Route path="/" name="NYSE" component={EzlogNy} />
-          <Route exact path="/EzlogNas" name="Nasdaq" component={EzlogNas} />
-        </Switch>
-      </HashRouter>
+      <div className="container">
+        <Header title="Welcome to our app" />
+        <HashRouter>
+          <Switch>
+            <Route exact path="/" name="NYSE" component={EzlogNy} />
+            <Route path="/EzlogNas" name="Nasdaq" component={EzlogNas} />
+            <Route component={_404} />
+          </Switch>
+        </HashRouter>
+      </div>
     );
   }
 }
