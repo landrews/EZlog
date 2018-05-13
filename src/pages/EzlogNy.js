@@ -2,15 +2,16 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import * as userActions from '../store/actions/user'
-import { Link } from 'react-router-dom'
+import EzlogNav from '../components/nav/EzlogNav';
+
 
 class EzlogNy extends Component {
   render() {
     return (
       <div className="EzlogNy">
-        <h1>NYSE Interface Container</h1>
-        <p>Welcome {`${this.props.user.email}`}</p>
-        <Link to={'/EzlogNas'}>Nasdaq</Link>
+          <EzlogNav></EzlogNav>
+          <p class='text-center'>Welcome {`${this.props.user.email}`}</p>
+          <h1 class="text-center"> NYSE </h1>
       </div>
     );
   }
