@@ -1,5 +1,6 @@
 import React from 'react';
 import '../config/keys.js';
+import AuthUserContext from './AuthUserContext';
 
 // This import loads the firebase namespace along with all its type information.
 import firebase from 'firebase/app';
@@ -38,9 +39,9 @@ class Messages extends React.Component {
 
     renderMessages = (messages) => {
         var self = this
-        if (this.props.isLoggedIn) {
+        if (this.props.authUser != null) {
             var displayMessage = messages.map(function (item) {
-                return <tr key={item.key}><td>{item.message}</td><td className='delete' data-id={item.key} onClick={evt => self.deleteMessage(evt)}>Delete</td></tr>
+                return <li key={item.key}><p>{item.message}</p><button className='delete' data-id={item.key} onClick={evt => self.deleteMessage(evt)}>Delete</button></li>
             })
             return displayMessage
         }
@@ -48,21 +49,30 @@ class Messages extends React.Component {
 
     render() {
         return (
-            <div className="container">
-                <section className="formSection hidden">
-                    <input type="text" id="message" onChange={evt => this.updateInputValue(evt.target.value)} value={this.state.newMessage} />
-                    <button id="sendMessage" onClick={this.sendMessage}>Post Message</button>
-                    {this.props.messages && (
-                        <section className="messages">
-                            <table>
-                                <tbody>
-                                {this.renderMessages(this.props.messages)}
-                                </tbody>
-                            </table>
-                        </section>
-                    )}
-                </section>
-            </div>
+            <AuthUserContext.Consumer>
+                {authUser =>
+                    <div className='container content'>
+                        {authUser != null ?
+                            <section className="formSection hidden">
+                                <div className='actionsWrapper'>
+                                    <div className='actions'>
+                                        <input type="text" id="message" onChange={evt => this.updateInputValue(evt.target.value)} value={this.state.newMessage} />
+                                        <button id="sendMessage" onClick={this.sendMessage}>Post Message</button>
+                                    </div>
+                                </div>
+                                {this.props.messages && (
+                                    <section className="messages">
+                                        <ul className='chatList'>
+                                            {this.renderMessages(this.props.messages)}
+                                        </ul>
+                                    </section>
+                                )}
+                            </section>
+
+                            : ''}
+                    </div>
+                }
+            </AuthUserContext.Consumer>
         )
     }
 }

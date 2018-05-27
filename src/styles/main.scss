@@ -1,49 +1,242 @@
 @import 'normalize.css';
-@import './constants.scss';
-
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700');
 body {
-  background: #ddd;
-  color: #333;
-  font-family: 'Arial';
+  background-color: #efefef;
+  font-family: 'Roboto Slab', serif;
+  margin: 0;
+  padding: 0;
 }
 
-h1 {
-  font-size: xx-large;
-  color: $primary-color;
+* {
+  box-sizing: border-box;
 }
 
-button{
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  background: #ccc;
+  border: 0;
+  cursor: pointer;
+  font: inherit;
   padding: 10px;
-  font-size: 1.2rem;
-  color: black;
-  background-color: #eee;
-  margin: 10px;
-  &:hover{
-    background-color: #999;
-    color: #eee;
-    cursor: pointer;
+  &:hover {
+    background: #4B0082;
+    color: #fff;
   }
 }
 
-li {
-  list-style: none;
+a {
+  transition: all 0.2s linear;
+  &:hover {
+    text-decoration: none;
+  }
 }
 
-input{
-  padding: 3px;
-  font-size: 1.2rem;
+h1 {
+  color: #666;
+  font-weight: normal;
+  margin-top: 0;
 }
 
-.messages{
-  .delete{
-    background-color: #9e475f;
-    color: #fff;
+.content {
+  flex-direction: column;
+  padding-top: 60px;
+}
+
+.container {
+  display: flex;
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 90vw;
+}
+
+.navContainer {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mainContainer{
+  margin: 0 10%;
+}
+
+.profileImg {
+  border-radius: 50%;
+  position: relative;
+}
+
+.profileImgWrapper {
+  display: block;
+  height: 50px;
+  position: relative;
+  width: 50px;
+}
+
+.profileImgWrapper:before {
+  background: linear-gradient(50deg, #b069e2, #4B0082);
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: 100% 100%;
+  border-radius: 50%;
+  bottom: 0;
+  content: '';
+  height: calc(100% + 6px);
+  left: -3px;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: calc(100% + 6px);
+}
+
+.profileImg {
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+}
+
+.loginButtons {
+  display: flex;
+  div {
+    order: 2;
+  }
+  button {
+    background: transparent;
+    border: 0;
+    margin: 0 20px 0 0;
+    opacity: 1;
+    order: 1;
+    padding: 0;
+    transition: all 0.2s linear;
+    &:hover {
+      color: #666;
+      opacity: 0.6;
+    }
+  }
+}
+
+.loginSolo {
+  background: transparent;
+  min-height: 50px;
+  &:hover {
+    background: #fff;
+    color: #666;
+  }
+}
+
+.showList {
+  display: flex;
+  flex-flow: row wrap;
+  li {
+    display: flex;
+    flex: 0 1 calc(99.9% * 1/4 - (30px - 30px * 1/4));
+    min-height: 160px;
+    margin: 0 30px 0 0;
+    a {
+      align-items: center;
+      background: #fff;
+      color: #666;
+      display: flex;
+      font-size: 18px;
+      justify-content: center;
+      padding: 40px;
+      text-align: center;
+      text-decoration: none;
+      transition: all 0.2s linear;
+      width: 100%;
+      &:hover {
+        background: #4B0082;
+        color: #fff;
+      }
+    }
+    &:nth-child(1n+5) {
+      margin-top: 30px;
+    }
+    &:nth-child(4n+4) {
+      margin-right: 0;
+    }
+  }
+}
+
+.actionsWrapper {
+  padding-bottom: 30px;
+  position: relative;
+  margin-bottom: 30px;
+  &:after {
+    background: #ccc;
+    bottom: 0;
+    content: '';
+    height: 1px;
+    position: absolute;
+    width: 100%;
+  }
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  input {
+    color: #666;
+    flex: 0 1 70%;
+    font: inherit;
     padding: 10px;
-    font-weight: normal;
+  }
+  button {
+    color: #333;
+    flex: 0 1 25%;
+    padding: 15px 10px;
     &:hover{
-      background-color: #db0a44;
-      cursor: pointer;
-      font-weight: bold;
+      color: #fff;
+    }
+  }
+}
+
+.chatList {
+  display: flex;
+  flex-flow: column;
+  li {
+    align-items: baseline;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    padding-left: 30px;
+    &:first-child {
+      margin-top: 0;
+    }
+    button {
+      background: #ccc;
+      border: 0;
+      color: #333;
+      padding: 30px;
+      transition: all 0.2s linear;
+      &:hover {
+        background: #4B0082;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.bodyContent {
+  max-width: 900px;
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  img {
+    float: left;
+    padding-right: 20px;
+  }
+  p {
+    &:first-of-type {
+      line-height: 1.6;
+      margin-top: 0;
     }
   }
 }

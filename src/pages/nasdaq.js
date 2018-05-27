@@ -45,7 +45,7 @@ class Nasdaq extends React.Component {
     render() {
         return (
             <Layout>
-                <p>This is the Nasdaq page</p>
+                <h1>This is the Nasdaq page</h1>
                 {this.state.profiles && (
                     <div>
                         {this.renderProfiles(this.state.profiles)}

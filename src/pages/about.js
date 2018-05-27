@@ -45,12 +45,12 @@ class About extends React.Component {
     render() {
         return (
             <Layout>
-                <p>This is the about page</p>
-                {this.state.profiles && (
-                    <div>
-                        {this.renderProfiles(this.state.profiles)}
-                    </div>
-                )}
+                    <p>This is the about page</p>
+                    {this.state.profiles && (
+                        <div>
+                            {this.renderProfiles(this.state.profiles)}
+                        </div>
+                    )}
             </Layout>
         )
     }

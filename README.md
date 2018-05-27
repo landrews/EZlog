@@ -1,3 +1,23 @@
+In the firebase directory, create a keys.js file that has this
+```
+import * as firebase from "firebase";
+
+var config = {
+    apiKey: "YOUR API KEY",
+    authDomain: "YOUR DOMAIN",
+    databaseURL: "YOUR DATABASE URL",
+    projectId: "YOUR PROJECT",
+    storageBucket: "YOUR STORAGE ID",
+    messagingSenderId: "YOUR MESSAGING ID"
+  };
+
+  if (!firebase.apps.length) {
+    firebase.initializeApp(config);
+  }
+  
+  export default config
+```
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>

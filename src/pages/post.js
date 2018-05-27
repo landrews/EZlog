@@ -2,11 +2,16 @@ import Layout from '../components/Layout.js'
 import fetch from 'isomorphic-unfetch'
 
 const Post =  (props) => (
-    <Layout>
-       <h1>{props.show.name}</h1>
-       <p>{props.show.summary.replace(/<[/]?p>/g, '')}</p>
-       <img src={props.show.image ? props.show.image.medium : ''}/>
-    </Layout>
+  <Layout>
+  <div className='container content'>
+    <h1>{props.show.name}</h1>
+    
+    <div className='bodyContent'>
+      <img src={props.show.image ? props.show.image.medium : ''} />
+      <p>{props.show.summary.replace(/<[/]?p>/g, '')}</p>
+    </div>
+  </div>
+</Layout>
 )
 
 Post.getInitialProps = async function (context) {

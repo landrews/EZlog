@@ -6,33 +6,17 @@ import '../config/keys.js';
 import * as firebase from 'firebase';
 
 // These imports load individual services into the firebase namespace.
-import 'firebase/auth';
 import 'firebase/database';
-import LoginControl from '../components/Login.js';
 import MessagesControl from '../components/Messages.js';
 
 class Chat extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { user: null, isLoggedIn: false, authChecked: false, messages: null };
-    }
-    componentDidMount() {
-        var self = this;
-        firebase.auth().onAuthStateChanged((user) => {
-            if (user) {
-                self.handleLogin({ isLoggedIn: true, user: user })
-            }
-            self.setState({ authChecked: true }, () => { })
-        })
-    }
-
-    handleLogin = (props) => {
-        this.setState({ isLoggedIn: props.isLoggedIn, user: props.user })
-        this.getMessages()
+        this.state = { messages: null, isLoggedIn: true };
     }
 
     updateMessages = (props) => {
-        this.setState({ messages: props.messages })
+        this.setState({ messages: props.messages, isLoggedIn: true })
     }
 
     getMessages = () => {
@@ -44,20 +28,14 @@ class Chat extends React.Component {
             for (var item in messages) {
                 allMessages.push({ key: item, message: messages[item].message })
             }
-            self.updateMessages({messages: allMessages});
+            self.updateMessages({ messages: allMessages });
         });
     }
 
     render() {
-        if (!this.state.authChecked) {
-            return null;
-        }
         return (
             <Layout>
-                <div className="container">
-                    <LoginControl handleLogin={this.handleLogin} {...this.state} />
-                    <MessagesControl updateMessages={this.getMessages} {...this.state} />
-                </div>
+                    <MessagesControl updateMessages={this.getMessages} authUser=''  {...this.state} />
             </Layout>
         )
     }
