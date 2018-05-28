@@ -10,6 +10,7 @@
 /build
 .next
 keys.js
+/src/out
 
 # misc
 .DS_Store
