@@ -1,12 +1,7 @@
 import Layout from '../components/Layout.js'
 import React from 'react';
-import '../config/keys.js';
+import { firebase } from '../firebase'
 
-// This import loads the firebase namespace along with all its type information.
-import * as firebase from 'firebase';
-
-// These imports load individual services into the firebase namespace.
-import 'firebase/database';
 import MessagesControl from '../components/Messages.js';
 
 class Chat extends React.Component {
@@ -21,7 +16,7 @@ class Chat extends React.Component {
 
     getMessages = () => {
         var self = this;
-        firebase.database().ref('messages').on('value', function (results) {
+        firebase.db.ref('messages').on('value', function (results) {
             let allMessages = []
             var messages = results.val()
             // iterate through results coming from database call; messages

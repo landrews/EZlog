@@ -1,17 +1,11 @@
 import Layout from '../components/Layout'
 import React from 'react';
-import '../config/keys.js';
-
-// This import loads the firebase namespace along with all its type information.
-import firebase from 'firebase/app';
-
-// These imports load individual services into the firebase namespace.
-import 'firebase/database';
+import { firebase } from '../firebase';
 
 class Nasdaq extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { database: firebase.database(), profiles: null }
+        this.state = { profiles: null }
     }
 
     componentDidMount() {
@@ -30,7 +24,7 @@ class Nasdaq extends React.Component {
 
     getProfiles = () => {
         var self = this;
-        var ref = this.state.database.ref('profiles').orderByChild('displayName').equalTo('Test Key')
+        var ref = firebase.db.ref('profiles').orderByChild('displayName').equalTo('Test Key')
         ref.on('value', function (results) {
             let allProfiles = []
             var profiles = results.val()

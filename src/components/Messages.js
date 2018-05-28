@@ -1,17 +1,11 @@
 import React from 'react';
-import '../config/keys.js';
 import AuthUserContext from './AuthUserContext';
-
-// This import loads the firebase namespace along with all its type information.
-import firebase from 'firebase/app';
-
-// These imports load individual services into the firebase namespace.
-import 'firebase/database';
+import { firebase } from '../firebase'
 
 class Messages extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { database: firebase.database(), messages: null, newMessage: '' }
+        this.state = { messages: null, newMessage: '' }
     }
 
     componentDidMount() {
@@ -23,7 +17,7 @@ class Messages extends React.Component {
     }
 
     sendMessage = () => {
-        var myCollection = this.state.database.ref('messages')
+        var myCollection = firebase.db.ref('messages')
         var message = this.state.newMessage
         myCollection.push({ message: message })
         this.updateInputValue('')
@@ -33,7 +27,7 @@ class Messages extends React.Component {
     deleteMessage = (id) => {
         // find message whose objectId is equal to the id we're searching with
         var idToDelete = id.target.dataset.id
-        var messageReference = this.state.database.ref('/messages/' + idToDelete)
+        var messageReference = firebase.db.ref('/messages/' + idToDelete)
         messageReference.remove()
     }
 
