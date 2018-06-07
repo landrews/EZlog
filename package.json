@@ -12,7 +12,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "@zeit/next-sass": "^0.2.0",
     "autoprefixer": "^8.5.0",
