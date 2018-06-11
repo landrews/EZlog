@@ -41,10 +41,10 @@ class Index extends React.Component {
     render() {
         return (
             <Layout>
-              
+                <NYSECalculator/>
                 {this.state.profiles && (
                     <div>
-                        <NYSECalculator/>
+                        
                         {this.renderProfiles(this.state.profiles)}
                     </div>
                 )}

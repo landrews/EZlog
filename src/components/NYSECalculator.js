@@ -1,20 +1,45 @@
 const formContainer = {
-  backgroundColor: "#f2f2f2",
-  width: "25%", 
-}
+  backgroundColor: "#efefef",
+  width: "50%",
+  height: "50%",
+  padding: "20px 20px",
+  margin: "10px 10px",
+  border: "none",
+  borderRadius: "5px",
+};
 
 const formStyle = {
   width: "100%",
-
-}
-
-const labelStyle = {
-  
-}
+  padding: "10px 20px",
+  border: "none",
+  margin: "auto",
+  display: "inline-block",
+  borderRadius: "5px",
+  boxSizing: "border-box",
+  backgroundColor: "#fff",
+};
 
 const submitStyle = {
+  width: "100%",
+  padding: "10px 20px",
+  border: "none",
+  margin: "auto",
+  display: "inline-block",
+  borderRadius: "5px",
+  boxSizing: "border-box",
+  backgroundColor: "#ccc",
+  fontSize: "18px",
+};
 
-}
+const labelStyle = {
+  display: "block",
+  textAlign: "center",
+  margin: "auto",
+  padding: "6px 2px",
+  borderRadius: "5px",
+  backgroundColor: "#efefef",
+  fontSize: "18px",  
+};
 
 class NYSECalculator extends React.Component {
   constructor(props) {
@@ -45,14 +70,14 @@ class NYSECalculator extends React.Component {
       <form onSubmit={this.handleSubmit}>
         
         <label style={labelStyle}>
-          USD Invested:
-          <input name="moneyInvested" type="number" value={this.state.moneyInvested} onChange={this.handleChange} style={formStyle} />
+          USD Invested
+          <input name="moneyInvested" type="text" value={this.state.moneyInvested} onChange={this.handleChange} style={formStyle} />
         </label>
 
         <br/>
 
-        <label>
-          NYSE Stock:
+        <label style={labelStyle}>
+          NYSE Stock
           <select name="stockName" value={this.state.stockName} onChange={this.handleChange} style={formStyle}>
             <option value="stock1">Stock1</option>
             <option value="stock2">Stock2</option>
@@ -63,8 +88,8 @@ class NYSECalculator extends React.Component {
 
         <br/>
 
-        <label>
-          Time Invested:
+        <label style={labelStyle}>
+          Time Invested
           <select name="timeName" value={this.state.timeName} onChange={this.handleChange} style={formStyle}>
             <option value="day">One Day</option>
             <option value="week">One Week</option>
@@ -85,13 +110,3 @@ class NYSECalculator extends React.Component {
 }
 
 export default NYSECalculator
-
-
-
-
-
-
-
-
-
-
