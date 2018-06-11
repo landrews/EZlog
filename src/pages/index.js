@@ -1,7 +1,8 @@
 import Layout from '../components/Layout'
 import React from 'react';
-
 import { firebase } from '../firebase';
+import NYSECalculator from '../components/NYSECalculator';
+
 
 class Index extends React.Component {
     constructor(props) {
@@ -40,9 +41,10 @@ class Index extends React.Component {
     render() {
         return (
             <Layout>
-                <p>This is the NYSE page</p>
+              
                 {this.state.profiles && (
                     <div>
+                        <NYSECalculator/>
                         {this.renderProfiles(this.state.profiles)}
                     </div>
                 )}
