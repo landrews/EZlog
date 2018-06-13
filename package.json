@@ -1,39 +1,17 @@
 {
-  "name": "ezlog",
-  "version": "0.1.0",
-  "private": true,
-  "main": "index.js",
   "scripts": {
-    "dev": "node server.js",
+    "dev": "next src",
     "build": "next build src",
-    "export": "next export src",
-    "start": "next start src",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "next start src"
   },
-  "keywords": [],
-  "author": "",
-  "license": "MIT",
   "dependencies": {
-    "@zeit/next-sass": "^0.2.0",
-    "autoprefixer": "^8.5.0",
-    "babel-plugin-module-resolver": "^3.1.1",
-    "babel-plugin-wrap-in-js": "^1.1.1",
-    "express": "^4.16.3",
-    "firebase": "^5.0.3",
-    "glob": "^7.1.2",
+    "@zeit/next-sass": "0.0.9",
+    "firebase": "^5.0.4",
     "isomorphic-unfetch": "^2.0.0",
     "next": "^6.0.3",
-    "node-sass": "^4.9.0",
+    "node-sass": "^4.7.2",
     "normalize.css": "^8.0.0",
-    "postcss-easy-import": "^3.0.0",
-    "postcss-loader": "^2.1.5",
-    "raw-loader": "^0.5.1",
-    "react": "^16.3.2",
-    "react-dom": "^16.3.2",
-    "react-markdown": "^3.3.2",
-    "sass-loader": "^7.0.1"
-  },
-  "devDependencies": {
-    "cross-env": "^5.1.5"
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0"
   }
 }
