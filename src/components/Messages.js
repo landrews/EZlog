@@ -1,5 +1,5 @@
 import React from 'react';
-import AuthUserContext from './AuthUserContext';
+import AuthUserContext from './Auth/AuthUserContext';
 import { firebase } from '../firebase'
 
 class Messages extends React.Component {

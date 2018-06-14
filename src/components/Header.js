@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import LoginControl from '../components/Login.js';
+import LoginControl from '../components/Auth/Login';
 
 const linkStyle = {
     marginRight: 15

@@ -6,7 +6,7 @@ import AuthUserContext from './AuthUserContext'
 import * as firebase from 'firebase';
 
 // These imports load individual services into the firebase namespace.
-import { auth, provider } from '../firebase';
+import { auth, provider } from '../../firebase';
 
 class LoginControl extends React.Component {
     constructor(props) {

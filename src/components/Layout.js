@@ -1,5 +1,5 @@
 import Header from './Header'
-import withAuthentication from './withAuthentication';
+import withAuthentication from './Auth/withAuthentication';
 import '../styles/style.scss'
 
 const Layout = (props) => (
