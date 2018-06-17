@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import AuthUserContext from './AuthUserContext'
+import AuthUserContext from './Auth/AuthUserContext'
 import { firebase } from '../firebase'
 
 class ProfileControl extends React.Component {

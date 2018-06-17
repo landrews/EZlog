@@ -1,7 +1,7 @@
 import Layout from '../components/Layout'
 import React from 'react'
 import { firebase } from '../firebase'
-import AuthUserContext from '../components/AuthUserContext'
+import AuthUserContext from '../components/Auth/AuthUserContext'
 import ProfileControl from '../components/Profile'
 
 class About extends React.Component {
