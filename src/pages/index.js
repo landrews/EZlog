@@ -3,6 +3,7 @@ import React from 'react';
 import { firebase } from '../firebase';
 import NYSECalculator from '../components/NYSE/NYSECalculator';
 
+
 class Index extends React.Component {
     constructor(props) {
         super(props);

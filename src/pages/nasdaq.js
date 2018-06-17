@@ -1,6 +1,7 @@
 import Layout from '../components/Layout'
 import React from 'react';
 import { firebase } from '../firebase';
+import NasdaqCalculator from '../components/Nasdaq/NasdaqCalculator';
 
 class Nasdaq extends React.Component {
     constructor(props) {
@@ -39,7 +40,7 @@ class Nasdaq extends React.Component {
     render() {
         return (
             <Layout>
-                <h1>This is the Nasdaq page</h1>
+                <NasdaqCalculator/>
                 {this.state.profiles && (
                     <div>
                         {this.renderProfiles(this.state.profiles)}

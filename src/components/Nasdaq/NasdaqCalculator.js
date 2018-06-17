@@ -1,11 +1,11 @@
-import './NYSECalculator.scss';
+import './NasdaqCalculator.scss';
 
-class NYSECalculator extends React.Component {
+class NasdaqCalculator extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       moneyInvested: null,
-      stockName: "nyse-one",
+      stockName: "nas-one",
       timeName: "one-day"
     };
 
@@ -18,7 +18,7 @@ class NYSECalculator extends React.Component {
   }
   
   handleSubmit(event) {
-    alert('USD Invested =  ' + this.state.moneyInvested + '  NYSE Stock =  ' + this.state.stockName + '  Time Invested =  ' + this.state.timeName);
+    alert('USD Invested =  ' + this.state.moneyInvested + '  Nasdaq Stock =  ' + this.state.stockName + '  Time Invested =  ' + this.state.timeName);
     event.preventDefault();
   }
 
@@ -26,7 +26,7 @@ class NYSECalculator extends React.Component {
     return (
     
     <div className='formContainer'>
-      <h1>NYSECalculator</h1>  
+      <h1>NasdaqCalculator</h1>  
       <form onSubmit={this.handleSubmit}>
         
         <label className='labelStyle'>
@@ -37,12 +37,12 @@ class NYSECalculator extends React.Component {
         <br/>
 
         <label className='labelStyle'>
-          NYSE Stock
+          Nasdaq Stock
           <select name="stockName" value={this.state.stockName} onChange={this.handleChange} className='formStyle'>
-            <option value="nyse-one">NYSE Stock One</option>
-            <option value="nyse-two">NYSE Stock Two</option>
-            <option value="nyse-three">NYSE Stock Three</option>
-            <option value="nyse-four">NYSE Stock Four</option>
+            <option value="nas-one">Nasdaq Stock One</option>
+            <option value="nas-two">Nasdaq Stock Two</option>
+            <option value="nas-three">Nasdaq Stock Three</option>
+            <option value="nas-four">Nasdaq Stock Four</option>
           </select>
         </label>
 
@@ -69,4 +69,4 @@ class NYSECalculator extends React.Component {
   }
 }
 
-export default NYSECalculator
+export default NasdaqCalculator
