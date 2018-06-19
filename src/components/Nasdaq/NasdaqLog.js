@@ -28,6 +28,8 @@ class NasdaqLog extends React.Component {
     <div className='logContainer'>
       <h1>NasdaqLog</h1>  
       <form onSubmit={this.handleSubmit}>
+
+      <br/>
         
         <label className='labelStyle'>
           USD Invested

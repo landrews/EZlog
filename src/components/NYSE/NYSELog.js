@@ -29,6 +29,8 @@ class NYSELog extends React.Component {
       <h1>NYSELog</h1>  
       <form onSubmit={this.handleSubmit}>
 
+      <br/>
+
         <label className='labelStyle'>
           USD Invested
           <input name="moneyInvested" type="text" value={this.state.moneyInvested} onChange={this.handleChange} className='formStyle' />

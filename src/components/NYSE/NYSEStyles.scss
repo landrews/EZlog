@@ -1,5 +1,6 @@
 h1 {
   text-decoration: underline;
+  font-size: 2.5vw;
 }
 
 .calculatorContainer {
@@ -35,6 +36,7 @@ h1 {
   border-radius: 5px;
   box-sizing: border-box;
   background-color: #fff;
+  font-size: 1.5vw;
 }
 
 .submitStyle {
@@ -46,7 +48,7 @@ h1 {
   border-radius: 5px;
   box-sizing: border-box;
   background-color: #ccc;
-  font-size: 18px;
+  font-size: 1.5vw;
 }
 
 .labelStyle {
@@ -56,5 +58,6 @@ h1 {
   padding: 6px 2px;
   border-radius: 5px;
   background-color: #efefef;
-  font-size: 18px;  
+  font-size: 2vw;
+  font-style: italic;  
 }

@@ -28,6 +28,8 @@ class NYSECalculator extends React.Component {
     <div className='calculatorContainer'>
       <h1>NYSECalculator</h1>  
       <form onSubmit={this.handleSubmit}>
+
+      <br/>
         
         <label className='labelStyle'>
           USD Invested
