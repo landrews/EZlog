@@ -1,12 +1,12 @@
 import './NYSEStyles.scss';
 
-class NYSECalculator extends React.Component {
+class NYSELog extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       moneyInvested: null,
       stockName: "nyse-one",
-      timeName: "one-day"
+      dateInvested: new Date(),
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -18,24 +18,24 @@ class NYSECalculator extends React.Component {
   }
   
   handleSubmit(event) {
-    alert('USD Invested =  ' + this.state.moneyInvested + '  NYSE Stock =  ' + this.state.stockName + '  Time Invested =  ' + this.state.timeName);
+    alert('USD Invested =  ' + this.state.moneyInvested + '  NYSE Stock =  ' + this.state.stockName + '  Date =  ' + this.state.dateInvested);
     event.preventDefault();
   }
 
   render() {
     return (
     
-    <div className='calculatorContainer'>
-      <h1>NYSECalculator</h1>  
+    <div className='logContainer'>
+      <h1>NYSELog</h1>  
       <form onSubmit={this.handleSubmit}>
-        
+
         <label className='labelStyle'>
           USD Invested
           <input name="moneyInvested" type="text" value={this.state.moneyInvested} onChange={this.handleChange} className='formStyle' />
         </label>
 
         <br/>
-
+        
         <label className='labelStyle'>
           NYSE Stock
           <select name="stockName" value={this.state.stockName} onChange={this.handleChange} className='formStyle'>
@@ -49,16 +49,11 @@ class NYSECalculator extends React.Component {
         <br/>
 
         <label className='labelStyle'>
-          Time Invested
-          <select name="timeName" value={this.state.timeName} onChange={this.handleChange} className='formStyle'>
-            <option value="one-day">One Day</option>
-            <option value="one-week">One Week</option>
-            <option value="one-month">One Month</option>
-            <option value="one-year">One Year</option>
-          </select>
-        </label>
+          Date
+          <input name="dateInvested" type="date" value={this.state.dateInvested} onChange={this.handleChange} className='formStyle' />
+        </label>      
 
-        <br/>
+        <br/>       
 
         <input name="submit" type="submit" value="Submit" className='submitStyle' />
         
@@ -69,4 +64,4 @@ class NYSECalculator extends React.Component {
   }
 }
 
-export default NYSECalculator
+export default NYSELog

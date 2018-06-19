@@ -2,6 +2,7 @@ import Layout from '../components/Layout'
 import React from 'react';
 import { firebase } from '../firebase';
 import NYSECalculator from '../components/NYSE/NYSECalculator';
+import NYSELog from '../components/NYSE/NYSELog';
 
 
 class Index extends React.Component {
@@ -42,6 +43,7 @@ class Index extends React.Component {
         return (
             <Layout>
                 <NYSECalculator/>
+                <NYSELog/>
                 {this.state.profiles && (
                     <div>
                         {this.renderProfiles(this.state.profiles)}

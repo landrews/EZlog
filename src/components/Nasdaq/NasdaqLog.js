@@ -1,12 +1,12 @@
 import './NasdaqStyles.scss';
 
-class NasdaqCalculator extends React.Component {
+class NasdaqLog extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       moneyInvested: null,
       stockName: "nas-one",
-      timeName: "one-day"
+      dateInvested: new Date(),
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -18,15 +18,15 @@ class NasdaqCalculator extends React.Component {
   }
   
   handleSubmit(event) {
-    alert('USD Invested =  ' + this.state.moneyInvested + '  Nasdaq Stock =  ' + this.state.stockName + '  Time Invested =  ' + this.state.timeName);
+    alert('USD Invested =  ' + this.state.moneyInvested + '  Nasdaq Stock =  ' + this.state.stockName + '  Date =  ' + this.state.dateInvested);
     event.preventDefault();
   }
 
   render() {
     return (
     
-    <div className='calculatorContainer'>
-      <h1>NasdaqCalculator</h1>  
+    <div className='logContainer'>
+      <h1>NasdaqLog</h1>  
       <form onSubmit={this.handleSubmit}>
         
         <label className='labelStyle'>
@@ -49,16 +49,11 @@ class NasdaqCalculator extends React.Component {
         <br/>
 
         <label className='labelStyle'>
-          Time Invested
-          <select name="timeName" value={this.state.timeName} onChange={this.handleChange} className='formStyle'>
-            <option value="one-day">One Day</option>
-            <option value="one-week">One Week</option>
-            <option value="one-month">One Month</option>
-            <option value="one-year">One Year</option>
-          </select>
+          Date
+          <input name="dateInvested" type="date" value={this.state.dateInvested} onChange={this.handleChange} className='formStyle' />
         </label>
 
-        <br/>
+        <br/>        
 
         <input name="submit" type="submit" value="Submit" className='submitStyle' />
         
@@ -69,4 +64,4 @@ class NasdaqCalculator extends React.Component {
   }
 }
 
-export default NasdaqCalculator
+export default NasdaqLog
