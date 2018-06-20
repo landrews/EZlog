@@ -26,35 +26,26 @@ class NYSELog extends React.Component {
     return (
     
     <div className='nyseLogContainer'>
-      <h1 className='nyseLogHeading'>NYSE Log</h1>  
+      <h1 className='nyseLogHeading'>NYSE Log</h1> 
       <form onSubmit={this.handleSubmit}>
       
-        <label className='nyseLabelStyle'>
-          USD Invested
-          <input name="moneyInvested" type="text" value={this.state.moneyInvested} onChange={this.handleChange} className='nyseFormStyle' />
-        </label>
+        <h2 className='nyseLabelStyle'>USD Invested</h2>
 
-        <br/>
+        <input name="moneyInvested" type="text" value={this.state.moneyInvested} onChange={this.handleChange} className='nyseFormStyle' />
         
-        <label className='nyseLabelStyle'>
-          NYSE Stock
-          <select name="stockName" value={this.state.stockName} onChange={this.handleChange} className='nyseFormStyle'>
-            <option value="nyse-one">NYSE Stock One</option>
-            <option value="nyse-two">NYSE Stock Two</option>
-            <option value="nyse-three">NYSE Stock Three</option>
-            <option value="nyse-four">NYSE Stock Four</option>
-          </select>
-        </label>
+        <h2 className='nyseLabelStyle'>NYSE Stock</h2>
 
-        <br/>
+        <select name="stockName" value={this.state.stockName} onChange={this.handleChange} className='nyseFormStyle'>
+          <option value="nyse-one">NYSE Stock One</option>
+          <option value="nyse-two">NYSE Stock Two</option>
+          <option value="nyse-three">NYSE Stock Three</option>
+          <option value="nyse-four">NYSE Stock Four</option>
+        </select>      
 
-        <label className='nyseLabelStyle'>
-          Date
-          <input name="dateInvested" type="date" value={this.state.dateInvested} onChange={this.handleChange} className='nyseFormStyle' />
-        </label>      
-
-        <br/>       
-
+        <h2 className='nyseLabelStyle'>Date</h2>       
+        
+        <input name="dateInvested" type="date" value={this.state.dateInvested} onChange={this.handleChange} className='nyseFormStyle' />
+                     
         <input name="submit" type="submit" value="Submit" className='nyseSubmitStyle' />
         
       </form>

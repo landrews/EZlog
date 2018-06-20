@@ -26,34 +26,25 @@ class NasdaqLog extends React.Component {
     return (
     
     <div className='nasLogContainer'>
-      <h1 className='nasLogHeading'>Nasdaq Log</h1>  
+      <h1 className='nasLogHeading'>Nasdaq Log</h1> 
       <form onSubmit={this.handleSubmit}>
 
-        <label className='nasLabelStyle'>
-          USD Invested
-          <input name="moneyInvested" type="text" value={this.state.moneyInvested} onChange={this.handleChange} className='nasFormStyle' />
-        </label>
+        <h2 className='nasLabelStyle'>USD Invested</h2>
+          
+        <input name="moneyInvested" type="text" value={this.state.moneyInvested} onChange={this.handleChange} className='nasFormStyle' />
 
-        <br/>
+        <h2 className='nasLabelStyle'>Nasdaq Stock</h2>
+        
+        <select name="stockName" value={this.state.stockName} onChange={this.handleChange} className='nasFormStyle'>
+          <option value="nas-one">Nasdaq Stock One</option>
+          <option value="nas-two">Nasdaq Stock Two</option>
+          <option value="nas-three">Nasdaq Stock Three</option>
+          <option value="nas-four">Nasdaq Stock Four</option>
+        </select>
 
-        <label className='nasLabelStyle'>
-          Nasdaq Stock
-          <select name="stockName" value={this.state.stockName} onChange={this.handleChange} className='nasFormStyle'>
-            <option value="nas-one">Nasdaq Stock One</option>
-            <option value="nas-two">Nasdaq Stock Two</option>
-            <option value="nas-three">Nasdaq Stock Three</option>
-            <option value="nas-four">Nasdaq Stock Four</option>
-          </select>
-        </label>
-
-        <br/>
-
-        <label className='nasLabelStyle'>
-          Date
-          <input name="dateInvested" type="date" value={this.state.dateInvested} onChange={this.handleChange} className='nasFormStyle' />
-        </label>
-
-        <br/>        
+        <h2 className='nasLabelStyle'>Date</h2>
+          
+        <input name="dateInvested" type="date" value={this.state.dateInvested} onChange={this.handleChange} className='nasFormStyle' />      
 
         <input name="submit" type="submit" value="Submit" className='nasSubmitStyle' />
         

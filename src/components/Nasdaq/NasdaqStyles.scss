@@ -30,12 +30,14 @@
   color: black;
   font-size: 2vw;
   text-shadow: .1vw .1vw .1vw #4CAF50;
+  border-bottom: .2vw solid #fff;
 }
 
 .nasLogHeading {
   color: black;
   font-size: 2vw;
   text-shadow: .1vw .1vw .1vw #4CAF50;
+  border-bottom: .2vw solid #fff;
 }
 
 .nasFormStyle {
@@ -46,9 +48,7 @@
   display: inline-block;
   box-sizing: border-box;
   border: none;
-  border-radius: 5%;
   font-size: 1.6vw;
-  font-style: italic;
 }
 
 .nasSubmitStyle {
@@ -66,13 +66,12 @@
 
 .nasLabelStyle {
   background-color: #efefef;
-  padding: .5vw;
+  padding: 1vw;
   margin: auto;
-  display: block;
+  display: inline-block;
   box-sizing: border-box;
-  border: .2vw solid #fff;
+  border: none;
   border-radius: 5%;
   text-align: center;
-  font-size: 1.6vw;
-  font-style: italic;    
+  font-size: 1.6vw;  
 }
