@@ -25,22 +25,20 @@ class NYSELog extends React.Component {
   render() {
     return (
     
-    <div className='logContainer'>
-      <h1>NYSELog</h1>  
+    <div className='nyseLogContainer'>
+      <h1 className='nyseLogHeading'>NYSE Log</h1>  
       <form onSubmit={this.handleSubmit}>
-
-      <br/>
-
-        <label className='labelStyle'>
+      
+        <label className='nyseLabelStyle'>
           USD Invested
-          <input name="moneyInvested" type="text" value={this.state.moneyInvested} onChange={this.handleChange} className='formStyle' />
+          <input name="moneyInvested" type="text" value={this.state.moneyInvested} onChange={this.handleChange} className='nyseFormStyle' />
         </label>
 
         <br/>
         
-        <label className='labelStyle'>
+        <label className='nyseLabelStyle'>
           NYSE Stock
-          <select name="stockName" value={this.state.stockName} onChange={this.handleChange} className='formStyle'>
+          <select name="stockName" value={this.state.stockName} onChange={this.handleChange} className='nyseFormStyle'>
             <option value="nyse-one">NYSE Stock One</option>
             <option value="nyse-two">NYSE Stock Two</option>
             <option value="nyse-three">NYSE Stock Three</option>
@@ -50,14 +48,14 @@ class NYSELog extends React.Component {
 
         <br/>
 
-        <label className='labelStyle'>
+        <label className='nyseLabelStyle'>
           Date
-          <input name="dateInvested" type="date" value={this.state.dateInvested} onChange={this.handleChange} className='formStyle' />
+          <input name="dateInvested" type="date" value={this.state.dateInvested} onChange={this.handleChange} className='nyseFormStyle' />
         </label>      
 
         <br/>       
 
-        <input name="submit" type="submit" value="Submit" className='submitStyle' />
+        <input name="submit" type="submit" value="Submit" className='nyseSubmitStyle' />
         
       </form>
     </div>

@@ -25,22 +25,20 @@ class NasdaqCalculator extends React.Component {
   render() {
     return (
     
-    <div className='calculatorContainer'>
-      <h1>NasdaqCalculator</h1>  
+    <div className='nasCalculatorContainer'>
+      <h1 className='nasCalculatorHeading'>Nasdaq Calculator</h1>  
       <form onSubmit={this.handleSubmit}>
 
-      <br/>
-        
-        <label className='labelStyle'>
+        <label className='nasLabelStyle'>
           USD Invested
-          <input name="moneyInvested" type="text" value={this.state.moneyInvested} onChange={this.handleChange} className='formStyle' />
+          <input name="moneyInvested" type="text" value={this.state.moneyInvested} onChange={this.handleChange} className='nasFormStyle' />
         </label>
 
         <br/>
 
-        <label className='labelStyle'>
+        <label className='nasLabelStyle'>
           Nasdaq Stock
-          <select name="stockName" value={this.state.stockName} onChange={this.handleChange} className='formStyle'>
+          <select name="stockName" value={this.state.stockName} onChange={this.handleChange} className='nasFormStyle'>
             <option value="nas-one">Nasdaq Stock One</option>
             <option value="nas-two">Nasdaq Stock Two</option>
             <option value="nas-three">Nasdaq Stock Three</option>
@@ -50,9 +48,9 @@ class NasdaqCalculator extends React.Component {
 
         <br/>
 
-        <label className='labelStyle'>
+        <label className='nasLabelStyle'>
           Time Invested
-          <select name="timeName" value={this.state.timeName} onChange={this.handleChange} className='formStyle'>
+          <select name="timeName" value={this.state.timeName} onChange={this.handleChange} className='nasFormStyle'>
             <option value="one-day">One Day</option>
             <option value="one-week">One Week</option>
             <option value="one-month">One Month</option>
@@ -62,7 +60,7 @@ class NasdaqCalculator extends React.Component {
 
         <br/>
 
-        <input name="submit" type="submit" value="Submit" className='submitStyle' />
+        <input name="submit" type="submit" value="Submit" className='nasSubmitStyle' />
         
       </form>
     </div>

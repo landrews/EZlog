@@ -25,22 +25,20 @@ class NYSECalculator extends React.Component {
   render() {
     return (
     
-    <div className='calculatorContainer'>
-      <h1>NYSECalculator</h1>  
+    <div className='nyseCalculatorContainer'>     
+      <h1 className='nyseCalculatorHeading'>NYSE Calculator</h1>  
       <form onSubmit={this.handleSubmit}>
-
-      <br/>
         
-        <label className='labelStyle'>
+        <label className='nyseLabelStyle'>
           USD Invested
-          <input name="moneyInvested" type="text" value={this.state.moneyInvested} onChange={this.handleChange} className='formStyle' />
+          <input name="moneyInvested" type="text" value={this.state.moneyInvested} onChange={this.handleChange} className='nyseFormStyle' />
         </label>
 
         <br/>
 
-        <label className='labelStyle'>
+        <label className='nyseLabelStyle'>
           NYSE Stock
-          <select name="stockName" value={this.state.stockName} onChange={this.handleChange} className='formStyle'>
+          <select name="stockName" value={this.state.stockName} onChange={this.handleChange} className='nyseFormStyle'>
             <option value="nyse-one">NYSE Stock One</option>
             <option value="nyse-two">NYSE Stock Two</option>
             <option value="nyse-three">NYSE Stock Three</option>
@@ -50,9 +48,9 @@ class NYSECalculator extends React.Component {
 
         <br/>
 
-        <label className='labelStyle'>
+        <label className='nyseLabelStyle'>
           Time Invested
-          <select name="timeName" value={this.state.timeName} onChange={this.handleChange} className='formStyle'>
+          <select name="timeName" value={this.state.timeName} onChange={this.handleChange} className='nyseFormStyle'>
             <option value="one-day">One Day</option>
             <option value="one-week">One Week</option>
             <option value="one-month">One Month</option>
@@ -62,7 +60,7 @@ class NYSECalculator extends React.Component {
 
         <br/>
 
-        <input name="submit" type="submit" value="Submit" className='submitStyle' />
+        <input name="submit" type="submit" value="Submit" className='nyseSubmitStyle' />
         
       </form>
     </div>
