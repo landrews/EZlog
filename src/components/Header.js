@@ -32,11 +32,6 @@ const Header = () => (
             </Link>
             </li>
             <li>
-            <Link href="/tv">
-                <a style={linkStyle}>TV api</a>
-            </Link>
-            </li>
-            <li>
             <Link href="/about">
                 <a style={linkStyle}>About</a>
             </Link>
