@@ -1,19 +1,18 @@
 # Table of Contents
 
-- [Isometric Unfetch Example](#isometric-unfetch-example)
-  -[Page Caller Example](#page-caller-example)
-  -[Function Fetcher Example](#function-fetcher-example)
-- [Firebase Intialization](#firebase-intialization-example)
+1. [Page Caller(Isomorphic Unfetch)](#isomorphic-unfetch-1)
+2. [Function Fetcher(Isomorphic Unfetch)](#isomorphic-unfetch-2)
+3. [Firebase Initialization](#firebase-initialization)
 
-## Isometric Unfetch Example
+---
 
-  ###Page caller Example
+## Page Caller(Isomorphic Unfetch) <a id="isomorphic-unfetch-1"></a>
 
-```
+```javascriptreact
 
 import Layout from '../components/Layout.js'
 import Link from 'next/link'
-import fetch from 'isomorphic-unfetch'
+mport fetch from 'isomorphic-unfetch'
 
 const Index = (props) => (
   <Layout>
@@ -42,9 +41,11 @@ export default Index
 
 ```
 
-  ###Function fetcher Example
+---
 
-```
+## Function Fetcher(Isomorphic Unfetch) <a id="isomorphic-unfetch-2"></a>
+
+```javscriptreact
 
 import Layout from '../components/Layout.js'
 import fetch from 'isomorphic-unfetch'
@@ -71,13 +72,15 @@ Post.getInitialProps = async function (context) {
   return { show }
 }
 
-export default Post -->
+export default Post
 
 ```
 
-## Firebase Intialization Example
+---
 
-```
+## Firebase Initialization <a id="firebase-initialization"></a>
+
+```javascriptreact
 
 In the firebase directory, create a keys.js file that has this:
 
@@ -94,8 +97,7 @@ var config = {
 
   if (!firebase.apps.length) {
     firebase.initializeApp(config);
-  }
-  
+}
   export default config
 
   ```
