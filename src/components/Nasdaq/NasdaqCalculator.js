@@ -4,9 +4,9 @@ class NasdaqCalculator extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      moneyInvested: null,
+      moneyInvested: new Number(0.00).toPrecision(3),
       stockName: "nas-one",
-      timeName: "one-day"
+      timeName: "one-day",
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -26,12 +26,13 @@ class NasdaqCalculator extends React.Component {
     return (
     
     <div className='nasCalculatorContainer'>
-      <h1 className='nasCalculatorHeading'>Nasdaq Calculator</h1> 
-      <form onSubmit={this.handleSubmit}>
 
+      <h1 className='nasCalculatorHeading'>Nasdaq Calculator</h1>
+
+      <form onSubmit={this.handleSubmit}>
         <h2 className='nasLabelStyle'>USD Invested</h2>
         
-        <input name="moneyInvested" type="text" value={this.state.moneyInvested} onChange={this.handleChange} className='nasFormStyle' />
+        <input name="moneyInvested" value={this.state.moneyInvested} onChange={this.handleChange} className='nasFormStyle' />
       
         <h2 className='nasLabelStyle'>Nasdaq Stock</h2>
       
@@ -51,9 +52,9 @@ class NasdaqCalculator extends React.Component {
           <option value="one-year">One Year</option>
         </select>
        
-        <input name="submit" type="submit" value="Submit" className='nasSubmitStyle' />
-        
+        <input name="submit" type="submit" value="Submit" className='nasSubmitStyle' />   
       </form>
+      
     </div>
 
     );

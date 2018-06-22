@@ -4,9 +4,9 @@ class NYSELog extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      moneyInvested: null,
+      moneyInvested: new Number(0.00).toPrecision(3),
       stockName: "nyse-one",
-      dateInvested: new Date(),
+      dateInvested: new Date().toLocaleDateString("en-US"),
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -26,12 +26,13 @@ class NYSELog extends React.Component {
     return (
     
     <div className='nyseLogContainer'>
-      <h1 className='nyseLogHeading'>NYSE Log</h1> 
+
+      <h1 className='nyseLogHeading'>NYSE Log</h1>
+
       <form onSubmit={this.handleSubmit}>
-      
         <h2 className='nyseLabelStyle'>USD Invested</h2>
 
-        <input name="moneyInvested" type="text" value={this.state.moneyInvested} onChange={this.handleChange} className='nyseFormStyle' />
+        <input name="moneyInvested" value={this.state.moneyInvested} onChange={this.handleChange} className='nyseFormStyle' />
         
         <h2 className='nyseLabelStyle'>NYSE Stock</h2>
 
@@ -44,11 +45,11 @@ class NYSELog extends React.Component {
 
         <h2 className='nyseLabelStyle'>Date</h2>       
         
-        <input name="dateInvested" type="date" value={this.state.dateInvested} onChange={this.handleChange} className='nyseFormStyle' />
+        <input name="dateInvested" value={this.state.dateInvested} onChange={this.handleChange} className='nyseFormStyle' />
                      
-        <input name="submit" type="submit" value="Submit" className='nyseSubmitStyle' />
-        
+        <input name="submit" type="submit" value="Submit" className='nyseSubmitStyle' />     
       </form>
+      
     </div>
 
     );

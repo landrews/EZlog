@@ -4,9 +4,9 @@ class NYSECalculator extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      moneyInvested: null,
+      moneyInvested: new Number(0.00).toPrecision(3),
       stockName: "nyse-one",
-      timeName: "one-day"
+      timeName: "one-day",
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -25,13 +25,14 @@ class NYSECalculator extends React.Component {
   render() {
     return (
     
-    <div className='nyseCalculatorContainer'>     
+    <div className='nyseCalculatorContainer'>
+
       <h1 className='nyseCalculatorHeading'>NYSE Calculator</h1>
+
       <form onSubmit={this.handleSubmit}>
-        
         <h2 className='nyseLabelStyle'>USD Invested</h2>
           
-        <input name="moneyInvested" type="text" value={this.state.moneyInvested} onChange={this.handleChange} className='nyseFormStyle' />
+        <input name="moneyInvested" value={this.state.moneyInvested} onChange={this.handleChange} className='nyseFormStyle' />
 
         <h2 className='nyseLabelStyle'>NYSE Stock</h2>
           
@@ -51,9 +52,9 @@ class NYSECalculator extends React.Component {
           <option value="one-year">One Year</option>
         </select>
 
-        <input name="submit" type="submit" value="Submit" className='nyseSubmitStyle' />
-        
+        <input name="submit" type="submit" value="Submit" className='nyseSubmitStyle' />  
       </form>
+
     </div>
 
     );

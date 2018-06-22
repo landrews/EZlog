@@ -4,9 +4,9 @@ class NasdaqLog extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      moneyInvested: null,
+      moneyInvested: new Number(0.00).toPrecision(3),
       stockName: "nas-one",
-      dateInvested: new Date(),
+      dateInvested: new Date().toLocaleDateString("en-US"),
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -26,12 +26,13 @@ class NasdaqLog extends React.Component {
     return (
     
     <div className='nasLogContainer'>
-      <h1 className='nasLogHeading'>Nasdaq Log</h1> 
-      <form onSubmit={this.handleSubmit}>
 
+      <h1 className='nasLogHeading'>Nasdaq Log</h1>
+
+      <form onSubmit={this.handleSubmit}>
         <h2 className='nasLabelStyle'>USD Invested</h2>
           
-        <input name="moneyInvested" type="text" value={this.state.moneyInvested} onChange={this.handleChange} className='nasFormStyle' />
+        <input name="moneyInvested" type="currency" value={this.state.moneyInvested} onChange={this.handleChange} className='nasFormStyle' />
 
         <h2 className='nasLabelStyle'>Nasdaq Stock</h2>
         
@@ -44,11 +45,11 @@ class NasdaqLog extends React.Component {
 
         <h2 className='nasLabelStyle'>Date</h2>
           
-        <input name="dateInvested" type="date" value={this.state.dateInvested} onChange={this.handleChange} className='nasFormStyle' />      
+        <input name="dateInvested" type="text" value={this.state.dateInvested} onChange={this.handleChange} className='nasFormStyle' />      
 
-        <input name="submit" type="submit" value="Submit" className='nasSubmitStyle' />
-        
+        <input name="submit" type="submit" value="Submit" className='nasSubmitStyle' /> 
       </form>
+
     </div>
 
     );
