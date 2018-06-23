@@ -28,14 +28,18 @@ class NasdaqLog extends React.Component {
     <div className='nasLogContainer'>
 
       <h1 className='nasLogHeading'>Nasdaq Log</h1>
-
-      <form onSubmit={this.handleSubmit}>
+      
+      <form onSubmit={this.handleSubmit}>     
         <h2 className='nasLabelStyle'>USD Invested</h2>
-          
-        <input name="moneyInvested" type="currency" value={this.state.moneyInvested} onChange={this.handleChange} className='nasFormStyle' />
-
-        <h2 className='nasLabelStyle'>Nasdaq Stock</h2>
         
+        <br/> 
+
+        <input name="moneyInvested" autoComplete="off" value={this.state.moneyInvested} onChange={this.handleChange} className='nasFormStyle' />
+        
+        <h2 className='nasLabelStyle'>Nasdaq Stock</h2>
+
+        <br/>
+
         <select name="stockName" value={this.state.stockName} onChange={this.handleChange} className='nasFormStyle'>
           <option value="nas-one">Nasdaq Stock One</option>
           <option value="nas-two">Nasdaq Stock Two</option>
@@ -44,11 +48,15 @@ class NasdaqLog extends React.Component {
         </select>
 
         <h2 className='nasLabelStyle'>Date</h2>
-          
-        <input name="dateInvested" type="text" value={this.state.dateInvested} onChange={this.handleChange} className='nasFormStyle' />      
 
-        <input name="submit" type="submit" value="Submit" className='nasSubmitStyle' /> 
-      </form>
+        <br/>
+
+        <input name="dateInvested" autoComplete="off" value={this.state.dateInvested} onChange={this.handleChange} className='nasFormStyle' />
+
+        <br/>
+
+        <input name="submit" type="submit" value="Submit" className='nasSubmitStyle'/>
+      </form> 
 
     </div>
 
