@@ -34,7 +34,7 @@ class NYSECalculator extends React.Component {
 
         <br/>
           
-        <input name="moneyInvested" autoComplete="off" value={this.state.moneyInvested} onChange={this.handleChange} className='nyseFormStyle' />
+        <input name="moneyInvested" autoComplete="off" value={this.state.moneyInvested} onChange={this.handleChange} className='nyseFormStyle' placeholder="Enter USD Invested" required/>
 
         <h2 className='nyseLabelStyle'>NYSE Stock</h2>
 

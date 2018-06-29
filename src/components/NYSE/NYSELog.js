@@ -35,7 +35,7 @@ class NYSELog extends React.Component {
         
         <br/>
         
-        <input name="moneyInvested" autoComplete="off" value={this.state.moneyInvested} onChange={this.handleChange} className='nyseFormStyle' />    
+        <input name="moneyInvested" autoComplete="off" value={this.state.moneyInvested} onChange={this.handleChange} className='nyseFormStyle' placeholder="Enter USD Invested" required />    
         
         <h2 className='nyseLabelStyle'>NYSE Stock</h2>
         
@@ -52,7 +52,7 @@ class NYSELog extends React.Component {
 
         <br/>
 
-        <input name="dateInvested" autoComplete="off" value={this.state.dateInvested} onChange={this.handleChange} className='nyseFormStyle' />                 
+        <input name="dateInvested" autoComplete="off" value={this.state.dateInvested} onChange={this.handleChange} className='nyseFormStyle' placeholder="Enter Date Invested" required />                 
         
         <br/>
 

@@ -34,7 +34,7 @@ class NasdaqLog extends React.Component {
         
         <br/> 
 
-        <input name="moneyInvested" autoComplete="off" value={this.state.moneyInvested} onChange={this.handleChange} className='nasFormStyle' />
+        <input name="moneyInvested" autoComplete="off" value={this.state.moneyInvested} onChange={this.handleChange} className='nasFormStyle' placeholder="Enter USD Invested" required/>
         
         <h2 className='nasLabelStyle'>Nasdaq Stock</h2>
 
@@ -51,7 +51,7 @@ class NasdaqLog extends React.Component {
 
         <br/>
 
-        <input name="dateInvested" autoComplete="off" value={this.state.dateInvested} onChange={this.handleChange} className='nasFormStyle' />
+        <input name="dateInvested" autoComplete="off" value={this.state.dateInvested} onChange={this.handleChange} className='nasFormStyle' placeholder="Enter Date Invested" required  />
 
         <br/>
 
