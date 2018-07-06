@@ -51,11 +51,10 @@ h1 {
   margin: 0 auto;
   max-width: 1200px;
   width: 90vw;
-}
-
-.navContainer {
-  align-items: center;
-  justify-content: space-between;
+  &.navContainer {
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 .mainContainer{

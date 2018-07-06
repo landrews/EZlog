@@ -1,7 +1,8 @@
-.nyseCalculatorContainer {
+// container styles
+%nyseContainers {
   background-color: #efefef;
   width: 49.5%;
-  height: 49.5%;
+  height: auto;
   padding: 1.5vw;
   margin: auto;
   display: block;
@@ -9,103 +10,97 @@
   border:.3vw solid #fff;
   border-radius: 5%;
   text-align: center;
-  float: left;
   opacity: 0.7;
+}
+
+.nyseCalculatorContainer {
+  @extend %nyseContainers;
+  float: left;
 }
 
 .nyseLogContainer {
-  background-color: #efefef;
-  width: 49.5%;
-  height: 49.5%;
-  padding: 1.5vw;
-  margin: auto;
-  display: block;
-  box-sizing: border-box;
-  border: .3vw solid #fff;
-  border-radius: 5%;
-  text-align: center;
+  @extend %nyseContainers;
   float: right;
-  opacity: 0.7;
 }
 
-.nyseCalculatorHeading {
+//text heading styles
+%nyseHeadings {
   color: black;
-  font-size: 30px;
+  font-size: 2rem;
   font-weight: 700;
   border-bottom: .2vw solid #fff;
   opacity: 0.6;
+}
+.nyseCalculatorHeading {
+  @extend %nyseHeadings;
 }
 
 .nyseLogHeading {
-  color: black;
-  font-size: 30px;
-  font-weight: 700;
-  border-bottom: .2vw solid #fff;
-  opacity: 0.6;
+  @extend %nyseHeadings;
 }
 
+// form and input styles
 .nyseFormStyle {
   background-color: #fff;
   width: 100%;
-  padding: 1vw;
-  margin: auto;
+  height: 3rem;
+  padding: 1rem;
+  margin: 0 auto 1.25rem;
   display: inline-block;
   box-sizing: border-box;
   border: none;
-  font-size: 26px;
+  font-size: 1.5rem;
   opacity: 0.6;
   transition: 0.3;
+  &:active {
+    opacity: 1.0;
+  }
+  &:hover {
+    opacity: 1.0;
+  }
 }
 
-.nyseFormStyle:active {
-  opacity: 1.0;
-}
-
-.nyseFormStyle:hover {
-  opacity: 1.0;
-}
-
+// submit button styles
 .nyseSubmitStyle {
   background: linear-gradient(to right, 	#4169E1, #1E90FF,  #4169E1);
   color: #fff;
   font-weight: 200;
-  width: 100%;
-  padding: 1vw;
+  width: auto;
+  padding: 1rem 2.5rem;
+  margin: 1.25rem auto 0.5rem;
+  display: inline-block;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 5%;
+  font-size: 1.5rem;
+  opacity: 0.6;
+  transition: 0.4s;
+  &:active {
+    background: linear-gradient(to right, 	#4169E1 , 	#1E90FF,  #4169E1);
+    color: #fff;
+    font-weight: 600;
+    opacity: 1;
+  }
+  &:hover {
+    background: linear-gradient(to right, 	#4169E1, #1E90FF,  #4169E1);
+    color: #fff;
+    font-weight: 600;
+    opacity: 1;
+  }
+}
+
+//label styles
+.nyseLabelStyle {
+  background-color: #efefef;
+  color: #191970;
   margin: auto;
   display: inline-block;
   box-sizing: border-box;
   border: none;
   border-radius: 5%;
-  font-size: 26px;
-  opacity: 0.6;
-  transition: 0.3s;
-}
-
-.nyseSubmitStyle:active {
-  background: linear-gradient(to right, 	#4169E1 , 	#1E90FF,  #4169E1);
-  color: #fff;
-  font-weight: 600;
-  opacity: 1;
-}
-
-.nyseSubmitStyle:hover {
-  background: linear-gradient(to right, 	#4169E1, #1E90FF,  #4169E1);
-  color: #fff;
-  font-weight: 600;
-  opacity: 1;
-} 
-
-.nyseLabelStyle {
-  background-color: #efefef;
-  color: #191970;
-  padding: 1vw;
-  margin: auto;
-  display: inline-block;
-  box-sizing: border-box;
-  border:none;
-  border-radius: 5%;
   text-align: center;
-  font-size: 26px;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
   font-weight: 400;
   opacity: .7;
 }

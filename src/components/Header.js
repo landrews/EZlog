@@ -8,7 +8,7 @@ const linkStyle = {
 
 const nav = {
     backgroundColor: "#fff",
-    padding: "15px",
+    padding: "1rem",
     width: "100%"
 }
 

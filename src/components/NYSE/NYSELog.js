@@ -33,14 +33,10 @@ class NYSELog extends React.Component {
       <form onSubmit={this.handleSubmit}>  
         <h2 className='nyseLabelStyle'>USD Invested</h2>
         
-        <br/>
-        
         <input name="moneyInvested" autoComplete="off" value={this.state.moneyInvested} onChange={this.handleChange} className='nyseFormStyle' placeholder="Enter USD Invested" required />    
         
         <h2 className='nyseLabelStyle'>NYSE Stock</h2>
         
-        <br/>
-
         <select name="stockName" value={this.state.stockName} onChange={this.handleChange} className='nyseFormStyle'>
           <option value="nyse-one">NYSE Stock One</option>
           <option value="nyse-two">NYSE Stock Two</option>
@@ -50,12 +46,7 @@ class NYSELog extends React.Component {
 
         <h2 className='nyseLabelStyle'>Date</h2>
 
-        <br/>
-
         <input name="dateInvested" autoComplete="off" value={this.state.dateInvested} onChange={this.handleChange} className='nyseFormStyle' placeholder="Enter Date Invested" required />                 
-        
-        <br/>
-
         <input name="submit" type="submit" value="Submit" className='nyseSubmitStyle'/>
       </form>
       

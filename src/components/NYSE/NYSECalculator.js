@@ -24,21 +24,16 @@ class NYSECalculator extends React.Component {
 
   render() {
     return (
-    
     <div className='nyseCalculatorContainer'>
 
       <h1 className='nyseCalculatorHeading'>NYSE Calculator</h1>
 
       <form onSubmit={this.handleSubmit}>
         <h2 className='nyseLabelStyle'>USD Invested</h2>
-
-        <br/>
           
         <input name="moneyInvested" autoComplete="off" value={this.state.moneyInvested} onChange={this.handleChange} className='nyseFormStyle' placeholder="Enter USD Invested" required/>
 
         <h2 className='nyseLabelStyle'>NYSE Stock</h2>
-
-        <br/>
           
         <select name="stockName" value={this.state.stockName} onChange={this.handleChange} className='nyseFormStyle'>
           <option value="nyse-one">NYSE Stock One</option>
@@ -48,8 +43,6 @@ class NYSECalculator extends React.Component {
         </select>
 
         <h2 className='nyseLabelStyle'>Time Invested</h2>
-
-        <br/>
 
         <select name="timeName" value={this.state.timeName} onChange={this.handleChange} className='nyseFormStyle'>
           <option value="one-day">One Day</option>
@@ -62,7 +55,6 @@ class NYSECalculator extends React.Component {
       </form>
 
     </div>
-
     );
   }
 }
